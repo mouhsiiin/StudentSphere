@@ -1,3 +1,3 @@
-<h1>welcome student still</h1>
+<h1>welcome student s till</h1>
 
 <a href="{{ route('home') }}" >Log out</a>
