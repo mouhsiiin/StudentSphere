@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\AnnouncementController;
 
 
 /*
@@ -44,3 +45,8 @@ Route::middleware('auth')->group(function () {
         return view('viceDoyan.viceDoyandash');
     })->name('viceDoyan.dashboard');
 });
+
+
+//announcments routing
+Route::get('chefDep/announcements/create', [AnnouncementController::class, 'showCreateForm'])->name('chefDep.announcements.create');
+Route::post('chefDep/announcements/create', [AnnouncementController::class, 'create']);
