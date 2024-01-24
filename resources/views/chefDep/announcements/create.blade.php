@@ -1,6 +1,5 @@
-<!-- resources/views/announcements/create.blade.php -->
 
-{{-- @extends('layouts.app')  Assuming you have a layout file --}}
+@extends('layouts.mainLayout')
 
 @section('content')
     <div class="container">
@@ -26,5 +25,6 @@
 
             <button type="submit" class="btn btn-primary">Create Announcement</button>
         </form>
+        
     </div>
 @endsection

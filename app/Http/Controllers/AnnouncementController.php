@@ -7,6 +7,13 @@ use App\Models\Announcement;
 
 class AnnouncementController extends Controller
 {
+
+    public function visitorAnnouncements(){
+        return view('welcome', [
+            'announcements' => Announcement::all()
+        ]);
+    }
+
     public function showCreateForm()
     {
         return view('chefDep.announcements.create');
@@ -22,12 +29,12 @@ class AnnouncementController extends Controller
         $announcement = new Announcement([
             'title' => $request->title,
             'content' => $request->content,
-            'author_id' => auth()->id(), // Assuming user authentication
+            'author_id' => auth()->id(),
         ]);
 
         $announcement->save();
 
-        return redirect()->route('announcements.index')
+        return redirect()->route('chefDep.announcements.create')
             ->with('success', 'Announcement created successfully!');
     }
 }

@@ -6,53 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" />
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/announcement.css') }}">
 
-    <title>My University</title>
+    <title>{{config('app.name')}}</title>
 </head>
 
 <body>
     <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo">My University</a>
-
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Home</a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">About Us</a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">sectors</a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Departement</a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Contact Me</a>
-                    </li>
-                </ul>
-
-                <div class="nav__close" id="nav-close">
-                    <i class="ri-close-line"></i>
-                </div>
-            </div>
-
-            <div class="nav__actions">
-                <i class="ri-search-line nav__search" id="search-btn"></i>
-
-                <i class="ri-user-line nav__login" id="login-btn"></i>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="ri-menu-line"></i>
-                </div>
-            </div>
-        </nav>
+        @include('layouts.nav')
     </header>
 
     <div class="search" id="search">
@@ -65,29 +27,26 @@
     </div>
 
     <div class="login" id="login">
-        <form action="" class="login__form">
+        <form method="POST" action="{{ route('login') }}" class="login__form">
+            @csrf
             <h2 class="login__title">Log In</h2>
 
             <div class="login__group">
                 <div>
                     <label for="email" class="login__label">Email</label>
-                    <input type="email" placeholder="Write your email" id="email" class="login__input" />
+                    <input type="email" placeholder="Write your email" id="email" class="login__input"  name="email" required/>
                 </div>
 
                 <div>
                     <label for="password" class="login__label">Password</label>
-                    <input type="password" placeholder="Enter your password" id="password" class="login__input" />
+                    <input type="password" placeholder="Enter your password" id="password" class="login__input" name="password" required/>
                 </div>
             </div>
 
             <div>
                 <p class="login__signup">
-                    You do not have an account? <a href="#">Sign up</a>
+                    You do not have an account?
                 </p>
-
-                <a href="#" class="login__forgot">
-                    You forgot your password
-                </a>
 
                 <button type="submit" class="login__button">Log In</button>
             </div>
@@ -97,8 +56,7 @@
     </div>
 
     <main class="main">
-        <h1>main content lo</h1>
-        <img src="image_projet.avif" alt="image" class="main__bg" />
+       @yield('content')
     </main>
 
     <script>
