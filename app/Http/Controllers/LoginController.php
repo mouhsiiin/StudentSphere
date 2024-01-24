@@ -37,8 +37,8 @@ class LoginController extends Controller
         // Redirect back with error message if login fails
         return back()->withErrors(['message' => 'Invalid email or password']);
     }
-    public function showLoginForm()
-{
-    return view('login'); 
-}
+    public function showLoginForm(){
+
+        return view('login'); 
+    }
 }

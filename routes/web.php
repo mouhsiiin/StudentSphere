@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AnnouncementController;
+use App\Models\Announcement;
+use Illuminate\Support\Facades\Auth;
+
+
 
 
 /*
@@ -16,9 +20,17 @@ use App\Http\Controllers\AnnouncementController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', function () { 
+    $user = Auth::user();
+    $announcements = Announcement::join('users', 'announcements.author_id', '=', 'users.id')
+        ->where('users.role', 'chef_dep')
+        ->select('announcements.*')
+        ->get();
+
+    return view('welcome', [
+        'announcements' => $announcements
+    ]);
+    })->name('home');
 
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
@@ -26,23 +38,43 @@ Route::post('/login', [LoginController::class, 'login']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profResModule/dashboard', function () {
-        return view('profResModu.ProfResModudash');
+        $user = Auth::user();
+        return view('profResModu.ProfResModudash',[
+            'announcements' => Announcement::all(),
+            'userName' => $user ? $user->name : null
+        ]);
     })->name('ProfResModule.dashboard');
 
     Route::get('/student/dashboard', function () {
-        return view('student.studentdash');
+        $user = Auth::user();
+        return view('student.studentdash',[
+            'announcements' => Announcement::all(),
+            'userName' => $user ? $user->name : null
+        ]);
     })->name('student.dashboard');
     
     Route::get('/chefDep/dashboard', function () {
-        return view('chefDep.chefDepdash');
+        $user = Auth::user();
+        return view('chefDep.chefDepdash',[
+            'announcements' => Announcement::all(),
+            'userName' => $user ? $user->name : null
+        ]);
     })->name('chefDep.dashboard');
 
     Route::get('/Resfiliere/dashboard', function () {
-        return view('Resfiliere.Resfilieredash');
+        $user = Auth::user();
+        return view('Resfiliere.Resfilieredash',[
+            'announcements' => Announcement::all(),
+            'userName' => $user ? $user->name : null
+        ]);
     })->name('Resfiliere.dashboard');
     
     Route::get('/viceDoyan/dashboard', function () {
-        return view('viceDoyan.viceDoyandash');
+        $user = Auth::user();
+        return view('viceDoyan.viceDoyandash',[
+            'announcements' => Announcement::all(),
+            'userName' => $user ? $user->name : null
+        ]);
     })->name('viceDoyan.dashboard');
 });
 
@@ -50,3 +82,18 @@ Route::middleware('auth')->group(function () {
 //announcments routing
 Route::get('chefDep/announcements/create', [AnnouncementController::class, 'showCreateForm'])->name('chefDep.announcements.create');
 Route::post('chefDep/announcements/create', [AnnouncementController::class, 'create']);
+
+Route::get('profResModu/announcements/create', [AnnouncementController::class, 'showCreateForm'])->name('profResModu.announcements.create');
+Route::post('profResModu/announcements/create', [AnnouncementController::class, 'create']);
+
+Route::get('ResFiliere/announcements/create', [AnnouncementController::class, 'showCreateForm'])->name('ResFiliere.announcements.create');
+Route::post('ResFiliere/announcements/create', [AnnouncementController::class, 'create']);
+
+
+
+
+
+
+
+
+
