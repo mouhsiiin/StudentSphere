@@ -1,0 +1,32 @@
+
+=> Invité (Guest):
+    Consulter des informations sur les filières et leurs contenus.
+    Voir les annonces publiques liées aux départements (Soutenances de PFE, Journées portes ouvertes, etc.).
+
+=> Étudiant (Student):
+    Consulter son emploi du temps.
+    Consulter les annonces postées par les professeurs responsables des modules, le responsable de filière, et le chef de département.
+    Faire une demande de lettre de recommandation.
+    Demander un rendez-vous avec un professeur.
+    Justifier une absence.
+    Demander le changement de groupe de TP.
+    Le délégué de classe peut signaler au responsable de filière les pannes matérielles et les incidents du quotidien liés aux objets endommagés (chaise, tableau, prise internet, etc.).
+
+=> Professeur Responsable d'un Module:
+    Gérer les annonces liées à ses modules (annulation d'une séance, contrôle continu, etc.).
+    Répondre aux demandes postées par les étudiants.
+
+=> Responsable d'une Filière:
+    Gérer les annonces (arrêt des cours, planning des soutenances, etc.).
+    Répondre aux demandes postées par les étudiants.
+
+=> Chef d'un Département:
+    Gérer les emplois du temps des salles de son département.
+    Gérer les annonces (rencontres, périodes des soutenances des PFEs, etc.).
+
+=> Responsable du Service Pédagogique:
+    Gérer les emplois du temps des salles qui ne sont liées à aucun département.
+    Affecter une salle à un département.
+    Modifier le professeur responsable d'un département, d'une filière, ou d'un module.
+    Inscrire une nouvelle classe d'étudiants dans un module.
+    Ajouter et modifier le contenu d'une filière.
