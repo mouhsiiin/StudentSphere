@@ -12,21 +12,12 @@
     <title>{{config('app.name')}}</title>
 </head>
 
-<body>
+<body data-wrong-credentials="{{ $errors->has('message') }}">
     <header class="header" id="header">
         @include('layouts.nav')
     </header>
 
-    <div class="search" id="search">
-        <form action="" class="search__form">
-            <i class="ri-search-line search__icon"></i>
-            <input type="search" placeholder="What are you looking for?" class="search__input" />
-        </form>
-
-        <i class="ri-close-line search__close" id="search-close"></i>
-    </div>
-
-    <div class="login" id="login">
+    <div class="login" id="login" >
         <form method="POST" action="{{ route('login') }}" class="login__form">
             @csrf
             <h2 class="login__title">Log In</h2>
@@ -43,13 +34,11 @@
                 </div>
             </div>
 
-            <div>
-                <p class="login__signup">
-                    You do not have an account?
-                </p>
-
                 <button type="submit" class="login__button">Log In</button>
-            </div>
+                
+                @error('message')
+                <div class="text_danger">{{ $message }}</div>
+                @enderror
         </form>
 
         <i class="ri-close-line login__close" id="login-close"></i>
@@ -72,22 +61,14 @@
             navMenu.classList.remove("show-menu");
         });
 
-        const search = document.getElementById("search"),
-            searchBtn = document.getElementById("search-btn"),
-            searchClose = document.getElementById("search-close");
-
-        searchBtn.addEventListener("click", () => {
-            search.classList.add("show-search");
-        });
-
-        searchClose.addEventListener("click", () => {
-            search.classList.remove("show-search");
-        });
-
         const login = document.getElementById("login"),
             loginBtn = document.getElementById("login-btn"),
             loginClose = document.getElementById("login-close");
+            const wrongCredentials = {!! json_encode($errors->has('message')) !!};
 
+            if (wrongCredentials) {
+                login.classList.add("show-login");
+            }
         loginBtn.addEventListener("click", () => {
             login.classList.add("show-login");
         });
@@ -96,6 +77,7 @@
             login.classList.remove("show-login");
         });
     </script>
+    
 </body>
 
 </html>

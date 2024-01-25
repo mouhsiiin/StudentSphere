@@ -2,11 +2,11 @@
 @extends('layouts.mainLayout')
 
 @section('content')
-    <div class="container">
+    <div class="announcement-container ">
         <h2>Create Announcement</h2>
 
         @if(session('success'))
-            <div class="alert alert-success">
+            <div class="text-success">
                 {{ session('success') }}
             </div>
         @endif

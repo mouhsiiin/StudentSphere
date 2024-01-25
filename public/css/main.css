@@ -5,7 +5,7 @@
     --first-color: hsl(230, 75%, 56%);
     --title-color: hsl(230, 75%, 15%);
     --text-color: hsl(230, 12%, 40%);
-    --body-color: hsl(230, 100%, 98%);
+    --body-color: #e4e4e4;
     --container-color: hsl(230, 100%, 97%);
     --border-color: hsl(230, 25%, 80%);
 
@@ -62,19 +62,16 @@ a {
     text-decoration: none;
 }
 
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+.text_danger{
+    color: red;
 }
-
 .container {
     max-width: 1120px;
     margin-inline: 1.5rem;
 }
 
 .main {
-    padding: 10rem 5rem;
+    padding: 10rem 2.5rem;
     position: relative;
     height: 100vh;
 }
@@ -90,7 +87,6 @@ img {
     z-index: -1;
 }
 
-.search,
 .login {
     position: fixed;
     left: 0;
@@ -107,7 +103,7 @@ img {
     transition: opacity 0.4s;
 }
 
-.search__close,
+
 .login__close {
     position: absolute;
     top: 2rem;
@@ -156,7 +152,7 @@ img {
     transition: color 0.4s;
 }
 
-:is(.nav_logo, .navsearch, .navlogin, .navtoggle, .nav_link):hover {
+:is(.nav_logo, .navlogin, .navtoggle, .nav_link):hover {
     color: var(--first-color);
 }
 
@@ -196,42 +192,9 @@ img {
     top: 0;
 }
 
-.search__form {
-    display: flex;
-    align-items: center;
-    column-gap: 0.5rem;
-    background-color: var(--container-color);
-    box-shadow: 0 8px 32px hsla(230, 75%, 15%, 0.2);
-    padding-inline: 1rem;
-    border-radius: 0.5rem;
-    transform: translateY(-1rem);
-    transition: transform 0.4s;
-}
 
-.search__icon {
-    font-size: 1.25rem;
-    color: var(--title-color);
-}
 
-.search__input {
-    width: 100%;
-    padding-block: 1rem;
-    background-color: var(--container-color);
-    color: var(--text-color);
-}
 
-.search__input::placeholder {
-    color: var(--text-color);
-}
-
-.show-search {
-    opacity: 1;
-    pointer-events: initial;
-}
-
-.show-search .search__form {
-    transform: translateY(0);
-}
 
 .login__form,
 .login__group {
@@ -279,19 +242,7 @@ img {
     color: var(--text-color);
 }
 
-.login__signup {
-    margin-bottom: 0.5rem;
-}
 
-.login__signup a {
-    color: var(--first-color);
-}
-
-.login__forgot {
-    display: inline-block;
-    color: var(--first-color);
-    margin-bottom: 1.25rem;
-}
 
 .login__button {
     display: inline-block;
@@ -319,17 +270,13 @@ img {
 }
 
 @media screen and (min-width: 576px) {
-    .search,
+    
     .login {
         padding-top: 10rem;
     }
 
-    .search__form {
-        max-width: 450px;
-        margin-inline: auto;
-    }
+    
 
-    .search__close,
     .login__close {
         width: max-content;
         top: 5rem;

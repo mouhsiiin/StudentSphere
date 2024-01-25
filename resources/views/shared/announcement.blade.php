@@ -7,6 +7,6 @@
         </p>
     </div>
     <div class="announcement-footer">
-        <p>Posted on {{ now()->format('F j, Y') }}</p>
+        <p>Posted on {{ $announcement->created_at->format('F j, Y') }}</p>
     </div>
 </div>

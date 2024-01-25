@@ -4,11 +4,33 @@
     <div class="nav__menu" id="nav-menu">
         <ul class="nav__list">
             <li class="nav__item">
-                <a href="{{ route('home') }}" class="nav__link">Home</a>
-            </li>
+                @auth
+                @switch(Auth::user()->role)
+                    @case('prof_res_module')
+                        <a href="{{ route('ProfResModule.dashboard') }}" class="nav__link">DashBoard</a>
+                        @break
 
-            <li class="nav__item">
-                <a href="#" class="nav__link">sectors</a>
+                    @case('student')
+                        <a href="{{ route('student.dashboard') }}" class="nav__link">DashBoard</a>
+                        @break
+
+                    @case('chef_dep')
+                        <a href="{{ route('chefDep.dashboard') }}" class="nav__link">DashBoard</a>
+                        @break
+
+                    @case('res_filiere')
+                        <a href="{{ route('Resfiliere.dashboard') }}" class="nav__link">DashBoard</a>
+                        @break
+
+                    @case('vice_doyan')
+                        <a href="{{ route('viceDoyan.dashboard') }}" class="nav__link">DashBoard</a>
+                        @break
+
+                    @default
+                        <a href="{{ route('home') }}" class="nav__link">Home</a>
+                @endswitch
+                @endauth
+
             </li>
 
             <li class="nav__item">
@@ -16,7 +38,7 @@
             </li>
 
             <li class="nav__item">
-                <a href="#" class="nav__link">Contact us</a>
+                <a href="{{route('about')}}" class="nav__link">About us</a>
             </li>
         </ul>
 
@@ -26,7 +48,6 @@
     </div>
 
     <div class="nav__actions">
-        <i class="ri-search-line nav__search" id="search-btn"></i>
 
         <i class="ri-user-line nav__login" id="login-btn"></i>
 
