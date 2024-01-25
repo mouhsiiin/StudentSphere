@@ -3,14 +3,15 @@
 @section('content')
 <h1>welcome, Geust!</h1>
 
+{{-- <div class="func-container">
 
-<div class="fonctionnalités" >
-    <div> <div>fonctionnalité 1</div></div> 
-</div>
-@foreach ($announcements as $announcement)
-    <div class="announcement" data-id="{{ $announcement->id }}">
-        @include('shared.announcement')
+    <div class="functionality" >
+        <div> <div>fonctionnalité 1</div></div> 
     </div>
+</div> --}}
+
+@foreach ($announcements as $announcement)
+    @include('shared.announcement')
 @endforeach
 
 <div id="announcement-details" style="display: none;">

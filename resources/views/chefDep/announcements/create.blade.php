@@ -11,7 +11,7 @@
             </div>
         @endif
 
-        <form action="{{ route('chefDep.announcements.create') }}" method="post">
+        <form action="{{ route('chefDep.announcements.create') }}" method="post" class="form-container">
             @csrf
             <div class="form-group">
                 <label for="title">Title:</label>
