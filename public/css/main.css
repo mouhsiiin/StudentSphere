@@ -3,6 +3,7 @@
 :root {
     --header-height: 3.5rem;
     --first-color: hsl(230, 75%, 56%);
+    --second-color: hsl(230, 58%, 46%);
     --title-color: hsl(230, 75%, 15%);
     --text-color: hsl(230, 12%, 40%);
     --body-color: hsl(230, 100%, 98%);
@@ -76,11 +77,9 @@ img {
 .main {
     position: relative;
     box-sizing: border-box;
-   display: flex;
-   flex-direction: column;
-    border: solid 5px black;
-    
-    padding: 10rem 5rem;
+    display: flex;
+    flex-direction: column;    
+    padding: 10rem 2rem;
     position: relative;
     height: 100vh;
 }
@@ -380,4 +379,41 @@ img {
     .container {
         margin-inline: auto;
     }
+}
+
+.form-container {
+    max-width: 960px;
+    min-width: 60%;
+    margin: 50px auto;
+}
+
+.form-group {
+    margin-bottom: 16px;
+    min-width: 60;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.textarea, .select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    font-family: var(--body-font);
+
+}
+
+.button {
+    background-color:var(--first-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--second-color);
 }

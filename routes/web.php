@@ -92,12 +92,10 @@ Route::post('ResFiliere/announcements/create', [AnnouncementController::class, '
 
 
 
-// ...
 
 Route::get('/student/demandes/create', [DemandeController::class, 'create'])->name('demandes.create');
 Route::post('/demandes', [DemandeController::class, 'store'])->name('demandes.store');
 
-// ...
 Route::get('/demandes', [DemandeController::class, 'index'])->name('demandes.index');
 
 Route::get('filiers/affichageFiliere',function(){
