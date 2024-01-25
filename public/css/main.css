@@ -74,6 +74,12 @@ img {
 }
 
 .main {
+    position: relative;
+    box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+    border: solid 5px black;
+    
     padding: 10rem 5rem;
     position: relative;
     height: 100vh;
