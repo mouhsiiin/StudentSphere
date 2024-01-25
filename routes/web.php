@@ -6,8 +6,8 @@ use App\Http\Controllers\AnnouncementController;
 use App\Models\Announcement;
 use Illuminate\Support\Facades\Auth;
 
-
-
+use App\Http\Controllers\DemandeController;
+use App\Models\Demande;
 
 /*
 |--------------------------------------------------------------------------
@@ -97,7 +97,14 @@ Route::get('/about',function(){
 
 
 
+Route::get('/student/demandes/create', [DemandeController::class, 'create'])->name('demandes.create');
+Route::post('/demandes', [DemandeController::class, 'store'])->name('demandes.store');
 
+Route::get('/demandes', [DemandeController::class, 'index'])->name('demandes.index');
+
+Route::get('filiers/affichageFiliere',function(){
+     return view("filieres.affichageFiliere");
+});
 
 
 

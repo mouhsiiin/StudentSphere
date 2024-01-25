@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" />
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('css/announcement.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <title>{{config('app.name')}}</title>
 </head>
 

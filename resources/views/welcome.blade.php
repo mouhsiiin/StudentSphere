@@ -4,6 +4,9 @@
 <h1>welcome, Geust!</h1>
 
 
+<div class="fonctionnalités" >
+    <div> <div>fonctionnalité 1</div></div> 
+</div>
 @foreach ($announcements as $announcement)
     <div class="announcement" data-id="{{ $announcement->id }}">
         @include('shared.announcement')
