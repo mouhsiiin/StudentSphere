@@ -5,8 +5,10 @@
 
 {{-- <div class="func-container">
 
+
     <div class="functionality" >
         <div> <div>fonctionnalité 1</div></div> 
+
     </div>
 </div> --}}
 
