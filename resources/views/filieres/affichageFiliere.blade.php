@@ -26,20 +26,18 @@
         <label for="touch3"><span>master</span></label>
         <input type="checkbox" id="touch3">
         <ul class="slide">
-            <li><a href="#">MIP</a></li>
-            <li><a href="#">MIPC</a></li>
-            <li><a href="#">BCG</a></li>
-            <li><a href="#">GE-GM</a></li>
+            <li><a href="master/IASD">Intelligence Artificielle et Sciences de Données</a></li>
+            <li><a href="master/SIBD">Sécurité IT et Big Data</a></li>
+            
         </ul>
     </div>
     <div>
         <label for="touch4"><span>ingenieur</span></label>
         <input type="checkbox" id="touch4">
         <ul class="slide">
-            <li><a href="#">MIP</a></li>
-            <li><a href="#">MIPC</a></li>
-            <li><a href="#">BCG</a></li>
-            <li><a href="#">GE-GM</a></li>
+            <li><a href="#">LSI</a></li>
+            <li><a href="#">genie industriel</a></li>
+            
         </ul>
     </div>
    <!-- <div>licence</div>

@@ -126,5 +126,14 @@ Route::get('filiers/licence/IDAI',function(){
     return view("filieres.licence.IDAI");
 });
 
+Route::get('filiers/master/IASD',function(){
+    return view("filieres.master.IASD");
+});
+
+Route::get('filiers/master/SIBD',function(){
+    return view("filieres.master.SIBD");
+});
+
+
 
 
