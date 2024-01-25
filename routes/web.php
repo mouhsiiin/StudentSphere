@@ -98,6 +98,9 @@ Route::post('/demandes', [DemandeController::class, 'store'])->name('demandes.st
 
 Route::get('/demandes', [DemandeController::class, 'index'])->name('demandes.index');
 
+Route::get('filiers/affichageFiliere',function(){
+     return view("filieres.affichageFiliere");
+});
 
 
 
