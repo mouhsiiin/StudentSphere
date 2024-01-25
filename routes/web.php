@@ -106,5 +106,29 @@ Route::get('filiers/affichageFiliere',function(){
      return view("filieres.affichageFiliere");
 });
 
+Route::get('filiers/deust/MIP',function(){
+    return view("filieres.deust.MIP");
+});
+
+Route::get('filiers/deust/MIPC',function(){
+    return view("filieres.deust.MIPC");
+});
+
+Route::get('filiers/deust/GE-GM',function(){
+    return view("filieres.deust.GE-GM");
+});
+
+Route::get('filiers/deust/BCG',function(){
+    return view("filieres.deust.BCG");
+});
+
+Route::get('filiers/licence/AD',function(){
+    return view("filieres.licence.AD");
+});
+
+Route::get('filiers/licence/IDAI',function(){
+    return view("filieres.licence.IDAI");
+});
+
 
 

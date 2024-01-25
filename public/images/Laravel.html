@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://localhost:8000/filiers/affichageFiliere -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./Laravel_files/remixicon.css">
+    <link rel="stylesheet" href="./Laravel_files/main.css">
+    <link rel="stylesheet" href="./Laravel_files/announcement.css">
+    <link rel="stylesheet" href="./Laravel_files/style.css">
+    <title>Laravel</title>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+    <a href="http://localhost:8000/" class="nav__logo">Laravel</a>
+
+    <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+            <li class="nav__item">
+                <a href="http://localhost:8000/" class="nav__link">Home</a>
+            </li>
+
+            <li class="nav__item">
+                <a href="http://localhost:8000/filiers/affichageFiliere#" class="nav__link">sectors</a>
+            </li>
+
+            <li class="nav__item">
+                <a href="http://localhost:8000/filiers/affichageFiliere#" class="nav__link">Departement</a>
+            </li>
+
+            <li class="nav__item">
+                <a href="http://localhost:8000/filiers/affichageFiliere#" class="nav__link">Contact us</a>
+            </li>
+        </ul>
+
+        <div class="nav__close" id="nav-close">
+            <i class="ri-close-line"></i>
+        </div>
+    </div>
+
+    <div class="nav__actions">
+        <i class="ri-search-line nav__search" id="search-btn"></i>
+
+        <i class="ri-user-line nav__login" id="login-btn"></i>
+
+        <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line"></i>
+        </div>
+    </div>
+</nav>    </header>
+
+    <div class="search" id="search">
+        <form action="http://localhost:8000/filiers/affichageFiliere" class="search__form">
+            <i class="ri-search-line search__icon"></i>
+            <input type="search" placeholder="What are you looking for?" class="search__input">
+        </form>
+
+        <i class="ri-close-line search__close" id="search-close"></i>
+    </div>
+
+    <div class="login" id="login">
+        <form method="POST" action="http://localhost:8000/login" class="login__form">
+            <input type="hidden" name="_token" value="ERRYsY2KZTtRN2FVwFCeLHx6jmWBBKCaagR9L1KN" autocomplete="off">            <h2 class="login__title">Log In</h2>
+
+            <div class="login__group">
+                <div>
+                    <label for="email" class="login__label">Email</label>
+                    <input type="email" placeholder="Write your email" id="email" class="login__input" name="email" required="">
+                </div>
+
+                <div>
+                    <label for="password" class="login__label">Password</label>
+                    <input type="password" placeholder="Enter your password" id="password" class="login__input" name="password" required="">
+                </div>
+            </div>
+
+            <div>
+                <p class="login__signup">
+                    You do not have an account?
+                </p>
+
+                <button type="submit" class="login__button">Log In</button>
+            </div>
+        </form>
+
+        <i class="ri-close-line login__close" id="login-close"></i>
+    </div>
+
+    <main class="main">
+           
+
+<div class="cycle">
+    <div>
+        <label for="touch"><span>DEUST</span></label>
+        <input type="checkbox" id="touch">
+        <ul class="slide">
+            <li><a href="http://localhost:8000/filiers/affichageFiliere#">MIP</a></li>
+            <li><a href="http://localhost:8000/filiers/affichageFiliere#">MIPC</a></li>
+            <li><a href="http://localhost:8000/filiers/affichageFiliere#">BCG</a></li>
+            <li><a href="http://localhost:8000/filiers/affichageFiliere#">GE-GM</a></li>
+        </ul>
+    </div>
+    <div>
+        <label for="touch2"><span>licence</span></label>
+        <input type="checkbox" id="touch2">
+        <ul class="slide">
+            <li><a href="http://localhost:8000/filiers/affichageFiliere#"> Analytique des données(AD)</a></li>
+            <li><a href="http://localhost:8000/filiers/affichageFiliere#">Ingénierie de développement d’applications informatiques</a></li>
+            <li><a href="http://localhost:8000/filiers/affichageFiliere#">Ingénierie Statistique</a></li>
+            <li><a href="http://localhost:8000/filiers/affichageFiliere#">Génie Industrie</a></li>
+        </ul>
+    </div>
+    <div>
+        <label for="touch3"><span>master</span></label>
+        <input type="checkbox" id="touch3">
+        <ul class="slide">
+            <li><a href="http://localhost:8000/filiers/affichageFiliere#">MIP</a></li>
+            <li><a href="http://localhost:8000/filiers/affichageFiliere#">MIPC</a></li>
+            <li><a href="http://localhost:8000/filiers/affichageFiliere#">BCG</a></li>
+            <li><a href="http://localhost:8000/filiers/affichageFiliere#">GE-GM</a></li>
+        </ul>
+    </div>
+    <div>
+        <label for="touch4"><span>ingenieur</span></label>
+        <input type="checkbox" id="touch4">
+        <ul class="slide">
+            <li><a href="http://localhost:8000/filiers/affichageFiliere#">MIP</a></li>
+            <li><a href="http://localhost:8000/filiers/affichageFiliere#">MIPC</a></li>
+            <li><a href="http://localhost:8000/filiers/affichageFiliere#">BCG</a></li>
+            <li><a href="http://localhost:8000/filiers/affichageFiliere#">GE-GM</a></li>
+        </ul>
+    </div>
+   <!-- <div>licence</div>
+    <div>master</div>
+    <div></div>-->
+</div>
+    </main>
+
+    <script>
+        const navMenu = document.getElementById("nav-menu"),
+            navToggle = document.getElementById("nav-toggle"),
+            navClose = document.getElementById("nav-close");
+
+        navToggle.addEventListener("click", () => {
+            navMenu.classList.add("show-menu");
+        });
+
+        navClose.addEventListener("click", () => {
+            navMenu.classList.remove("show-menu");
+        });
+
+        const search = document.getElementById("search"),
+            searchBtn = document.getElementById("search-btn"),
+            searchClose = document.getElementById("search-close");
+
+        searchBtn.addEventListener("click", () => {
+            search.classList.add("show-search");
+        });
+
+        searchClose.addEventListener("click", () => {
+            search.classList.remove("show-search");
+        });
+
+        const login = document.getElementById("login"),
+            loginBtn = document.getElementById("login-btn"),
+            loginClose = document.getElementById("login-close");
+
+        loginBtn.addEventListener("click", () => {
+            login.classList.add("show-login");
+        });
+
+        loginClose.addEventListener("click", () => {
+            login.classList.remove("show-login");
+        });
+    </script>
+
+
+</body></html>

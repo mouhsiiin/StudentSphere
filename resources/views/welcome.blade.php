@@ -5,7 +5,7 @@
 
 
 <div class="fonctionnalités" >
-    <div> <div>fonctionnalité 1</div></div> 
+    <div> <div><a href="/filiers/affichageFiliere">filiers</a></div></div> 
 </div>
 @foreach ($announcements as $announcement)
     <div class="announcement" data-id="{{ $announcement->id }}">
