@@ -109,16 +109,6 @@ hr {
     background-color: red;
     border: none;
 }
-td , th {
-  padding: 10px;
-  border: solid 1px black;
-  margin: 0px;
-}
-
-table {
-  border-collapse: collapse;
-  border: solid 1px black;
-}
 /*
 .image-container {
     width: 300px; /* Ajustez la largeur selon vos besoins 
