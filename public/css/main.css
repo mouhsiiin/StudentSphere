@@ -147,7 +147,7 @@ a {
     column-gap: 1rem;
 }
 
-.nav__search,
+
 .nav__login,
 .nav__toggle,
 .nav__close {
@@ -185,6 +185,16 @@ a {
     color: var(--title-color);
     font-weight: var(--font-semi-bold);
     transition: color 0.4s;
+}
+
+.nav__item{
+    transition: transform 0.3s ease; 
+}
+.nav__item:hover{
+    transform: scale(1.1);
+}
+.nav__login:hover{
+    transform: scale(1.4);
 }
 
 .nav__close {

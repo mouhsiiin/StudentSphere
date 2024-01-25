@@ -1,4 +1,8 @@
-
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
 .announcement-card {
     max-width: 500px;
@@ -11,10 +15,6 @@
   
 }
 
-.announcement-card img {
-    width: 100%;
-    height: auto;
-}
 
 .announcement-content {
     padding: 20px;

@@ -1,9 +1,5 @@
 
-
-
-
-.fonctionnalités{
-    position: absolute;
+.functionality{
     box-sizing: border-box;
      padding: 0;
    margin-bottom: 10px;
@@ -15,7 +11,13 @@
     top: 20%;
     
 }
-.fonctionnalités > div> div {
+
+.func-container{
+  height: 50px;
+  
+}
+
+.functionality > div> div {
       
     color:white;
   width: 100%;
@@ -34,14 +36,14 @@
   height: 80%!important;
 
 }
-.fonctionnalités >div {
+.functionality >div {
     display: flex;
     align-items: flex-end;
     width: 23%;
     padding: 0px;
 
 }
-.fonctionnalités > div> div:hover {
+.functionality > div> div:hover {
     background-color: white;
     color:hsl(230, 12%, 40%);
     transform: translateY(-10px) !important;

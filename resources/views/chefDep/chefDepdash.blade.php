@@ -6,7 +6,8 @@
 @endif
 <h3>chef de departement</h3>
 
-<a href="{{ route('home') }}" >Log out</a>
-<a href="{{ route('chefDep.announcements.create') }}" >announcements</a>
+@foreach ($announcements as $announcement)
+    @include('shared.announcement')
+@endforeach
 
 @endsection

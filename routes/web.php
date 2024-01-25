@@ -104,7 +104,7 @@ Route::get('/demandes', [DemandeController::class, 'index'])->name('demandes.ind
 
 Route::get('filiers/affichageFiliere',function(){
      return view("filieres.affichageFiliere");
-});
+})->name('filiereShow');
 
 Route::get('filiers/deust/MIP',function(){
     return view("filieres.deust.MIP");
