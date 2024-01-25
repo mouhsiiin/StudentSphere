@@ -1,16 +1,31 @@
-<!-- create.blade.php -->
+@extends('layouts.mainLayout')
 
-<form action="{{ route('demandes.store') }}" method="post">
+@section('content')
+
+
+<form action="{{ route('demandes.store') }}" method="post" class="form-container">
     @csrf
-    <label for="contenu">Contenu:</label>
-    <textarea name="contenu" id="contenu" cols="30" rows="10"></textarea>
-<br>
-    <label for="type_demande">Type de Demande:</label>
-    <select name="type_demande" id="type_demande">
-        <option value="rendez-vous">Rendez-vous</option>
-        <option value="Justifier une absence">Justifier une absence</option>
-        <option value="autre">Autre</option>
-    </select>
-<br>
-    <button type="submit">Créer Demande</button>
+    <div class="form-group">
+        <label for="contenu">Contenu:</label>
+        <textarea name="contenu" id="contenu" class="textarea" cols="30" rows="10"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="type_demande">Type de Demande:</label>
+        <select name="type_demande" id="type_demande" class="select">
+            <option value="rendez-vous">Rendez-vous</option>
+            <option value="Justifier une absence">Justifier une absence</option>
+            <option value="autre">Autre</option>
+        </select>
+    </div>
+    
+    <button type="submit" class="button">Créer Demande</button>
 </form>
+
+@if(session('success'))
+<div class="text-success">
+    {{ session('success') }}
+</div>
+@endif
+
+@endsection
